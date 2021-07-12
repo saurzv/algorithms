@@ -1,2 +1,2 @@
 # random_projects
-Practice project to learn
+Practice projects to learn Python and Git
