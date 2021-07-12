@@ -1,5 +1,5 @@
 def greet() :
-	""" Function to greet and give the instruction."""
+	""" Greets and Gives the instruction."""
 
 	print("\n-xx-Welcome to the tic-tac-toe game-xx-\n\n"
 		"Position of the board is as follow\n"
@@ -11,7 +11,7 @@ def greet() :
 		"\tc1 | c2 | c3\n")
 
 def decide_turn(t):
-	""" Function to decide whose turn is this. """
+	""" Decides the turn. """
 
 	if t%2 == 1 :
 		return 1
@@ -19,7 +19,7 @@ def decide_turn(t):
 		return 2
 
 def print_board(a):
-	""" Function to print the board each turn"""
+	""" Prints the board each turn"""
 
 	print(f"\t{a[0][0]} | {a[0][1]} | {a[0][2]}\n"
 		"\t---------\n"
@@ -28,7 +28,7 @@ def print_board(a):
 		f"\t{a[2][0]} | {a[2][1]} | {a[2][2]}\n")
 
 def check_and_insert(a, usr_inpt, turn):
-	""" Function to check if the entry is correct and put it on the board. """
+	""" Check if the entry is correct and put it on the board. """
 
 	if len(usr_inpt) != 2 :
 		return False
@@ -58,26 +58,30 @@ def check_and_insert(a, usr_inpt, turn):
 arr = [[" " for i in range(3)] for j in range(3)] # array to store the input
 
 def check_winner(a):
-	""" Check for winner at each turn. """
-	
+	""" Checks for winner at each turn. """
+
+	# checks if all the elements of a particular row are same
 	for row in a :
 		if row.count(row[0]) == 3 and row[0] != " ":
 			return True
 
+	# checks if all the elements of a particular colummn aur same
 	for i in range(3):
 		if (a[0][i] == a[1][i] == a[2][i] != " ") :
 			return True
 
+	# checks for the diagonal
 	if(a[0][0] == a[1][1] == a[2][2] != " ") :
 		return True
 
+	# checks for the other diagonal
 	if(a[0][2] == a[1][1] == a[2][0] != " ") :
 		return True
 
 	return False
 
 def take_input():
-	""" Function to take input from the players. """
+	""" Takes input from the players. """
 	
 	t = 1
 	while(t != 9) :
