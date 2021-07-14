@@ -99,8 +99,6 @@ def take_input():
 		else :
 			print("Invalid input")
 
-def start() :
+if __name__ == "__main__" :
 	greet()
 	take_input()
-
-start()
