@@ -13,7 +13,7 @@ def binary_search(arr, key):
 			break
 	if(arr[k] == key):
 		return k
-	return k
+	return -1
 
 # print(binary_search([1,2,3,4,5], 3))
 # works fine, prints 2
