@@ -1,4 +1,6 @@
 # Binary Search
+# Find the index k of a key in a sorted array
+# T(n) = O(logn)
 
 def binary_search(arr, key) :
 	l = len(arr)
@@ -13,4 +15,5 @@ def binary_search(arr, key) :
 			s = mid+1
 	return -1
 
-print(binary_search([1,2,3,4,5], 6))
+# print(binary_search([1,2,3,4,5], 3))
+# works fine, prints 2
