@@ -1,6 +1,7 @@
 // Counting Sort
 // Sort the given array into increasing order
-// T(n) = O(n)
+// T(n) = O(n+k)    <-- k is range of numbers to be sorted (max - min)
+// worst case time complexity depends on k
 
 #include <bits/stdc++.h>
 using namespace std;
