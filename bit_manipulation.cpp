@@ -20,11 +20,22 @@ void prob_1(){
     }
     for (int i = 0; i < 31; i++)
     {
+        // instead of XOR if we need to find sum of pairwise AND
+        // we can change temp = (no. of 1 bits)Choose2
+        // in case of OR, change temp = nChoose2 - (no. of 0 bit)Choose2
         long long temp = (cnt[i])*(n-cnt[i]);   // this calculates: (no. of 1 bits)*(no. of 0 bits)
         ans += temp*(1LL<<i);   // temp*2^i
     }
     cout << ans << '\n';
 }
+/*
+ran with inputs :
+5
+1 2 3 4 5
+got output :
+42
+working fine.
+ */
 
 int main()
 {
